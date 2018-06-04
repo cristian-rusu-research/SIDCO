@@ -34,7 +34,7 @@ for k = 1:K
                 cvx_quiet(true);
                 variable x2(N)
 
-                minimize norm(m^(-1)*F*x2, inf) + lambda/m*norm(w.*x2, 1)
+                minimize norm(m^(-1)*F*x2, inf) + lambda/m*(w'*x2)
                 subject to
                          sum(x2) == m;
                          x2 <= 1;
