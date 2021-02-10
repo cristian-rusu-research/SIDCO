@@ -23,10 +23,11 @@ minmc = mcs;
 nrmCnst = 2;
 
 %% main iterations
-ordering = randperm(m); 
 oldA = A;
 
 for k=1:K
+
+    ordering = randperm(m); 
    
     for i = ordering
         target = A(:, i);
