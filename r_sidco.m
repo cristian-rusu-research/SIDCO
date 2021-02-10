@@ -24,9 +24,10 @@ nrmCnst = 2;
 
 %% main iterations
 oldA = A;
-ordering = randperm(m);
 
 for k=1:K
+
+    ordering = randperm(m);
     
     for i = ordering
         target = A(:, i);
